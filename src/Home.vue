@@ -1,5 +1,8 @@
 <template>
-  <p>home</p>
+  <div>
+    <nav></nav>
+    <div class="board-center"></div>
+  </div>
 </template>
 <script>
 export default {
@@ -7,7 +10,17 @@ export default {
   components: {},
   props: {},
   data() {
-    return {};
+    return {
+      tasks: [
+        { title: 'clean floor', description: 'make it shine', status: 'OPEN' },
+        {
+          title: 'wash dishes',
+          description: 'make it bright',
+          status: 'IN PROGRESS',
+        },
+        { title: 'wash clothes', description: 'make it soft', status: 'DONE' },
+      ],
+    };
   },
   computed: {},
   watch: {},
