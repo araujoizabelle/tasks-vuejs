@@ -1,0 +1,36 @@
+.board {
+    width: 25%;
+    padding: 16px;
+    margin: 5px;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.board-top {
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #737373;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.board-main {
+    width: 100%;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.open {
+    border-top: 5px solid orange;
+}
+
+.progress {
+    border-top: 5px solid blue;
+}
+
+.done {
+    border-top: 5px solid green;
+}

@@ -1,0 +1,27 @@
+.task-card {
+    width: 95%;
+    height: 50px;
+    margin-top: 5px;
+    padding: 6px;
+    background-color: #e2e2e2;
+    border-radius: 5px;
+}
+
+.task-card:hover {
+    cursor: grab;
+    filter: brightness(80%);
+}
+
+.task-card--top {
+    margin: 3px;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.task-card--main {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 2px;
+    padding: 2px;
+}
