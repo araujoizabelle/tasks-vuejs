@@ -15,7 +15,7 @@ module.exports = {
         // use the recommended rule set for both plain javascript and vue
         "eslint:recommended",
         "plugin:vue/recommended",
-        "plugin:prettier/recommended",
+        "plugin:prettier/recommended"
     ],
     rules: {
         "no-multi-spaces": "error",
@@ -23,5 +23,6 @@ module.exports = {
         "no-multiple-empty-lines": "error",
         "no-use-before-define": "error",
         "prettier/prettier": ["error", { "endOfLine": "auto" }],
-    }
+    },
+    plugins: ['prettier'],
 };
