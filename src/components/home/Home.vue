@@ -2,9 +2,9 @@
   <div class="home">
     <nav class="home-navigation"></nav>
     <div class="home-boards">
-      <board title="Open" class="open" />
-      <board title="In Progress" class="progress" />
-      <board title="Done" class="done" />
+      <board type="OPEN" class="open" />
+      <board type="IN_PROGRESS" class="progress" />
+      <board type="DONE" class="done" />
     </div>
   </div>
 </template>
@@ -17,7 +17,6 @@ export default {
   data() {
     return {};
   },
-  computed: {},
   watch: {},
   methods: {},
 };

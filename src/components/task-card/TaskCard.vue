@@ -1,14 +1,21 @@
 <template>
   <div class="task-card">
-    <div class="task-card--top">clean floor</div>
-    <div class="task-card--main">make it shine</div>
+    <div class="task-card--top">{{ task.title }}</div>
+    <div class="task-card--main">{{ task.description }}</div>
   </div>
 </template>
 <script>
 export default {
   name: 'TaskCard',
   components: {},
-  props: {},
+  props: {
+    task: {
+      type: Object,
+      default: () => {
+        return {};
+      },
+    },
+  },
   data() {
     return {};
   },

@@ -1,36 +1,38 @@
 <template>
   <div class="board">
     <div class="board-top">
-      <p>{{ title }}</p>
-      <p>{{ tasksNumber }}</p>
+      <p>{{ getTitleByType(type) }}</p>
+      <p>{{ tasksAmount() }}</p>
     </div>
     <div class="board-main">
-      <task-card />
-      <task-card />
+      <div v-for="(task, i) in getTasksByType(type)" :key="i">
+        <task-card :task="task" />
+      </div>
     </div>
   </div>
 </template>
 <script>
+import { mapGetters } from 'vuex';
 import TaskCard from '../task-card/TaskCard';
+
 export default {
   name: 'Board',
   components: { TaskCard },
   props: {
-    title: {
+    type: {
       type: String,
-      default: 'Tasks',
-    },
-    tasksNumber: {
-      type: Number,
-      default: 0,
+      default: 'OPEN',
     },
   },
-  data() {
-    return {};
+  computed: {
+    ...mapGetters(['getTasksByType', 'getTitleByType']),
   },
-  computed: {},
-  watch: {},
-  methods: {},
+  methods: {
+    tasksAmount() {
+      const amount = this.getTasksByType(this.type);
+      return amount.length;
+    },
+  },
 };
 </script>
 
